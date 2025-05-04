@@ -19,9 +19,9 @@ Each object has a `layer` attribute that governs the order of rendering of the i
 
 ### Examples:
 For the sake of competitiveness the examples are not the actual game screenshots but pictures that demonstrate the principle.
-[!image1](examples/perspective_best2.jpg)
+![image1](examples/perspective_best2.jpg)
 
-[!image2](examples/perspective_best5.jpg)
+![image2](examples/perspective_best5.jpg)
 
 
 ### Assets:
