@@ -1,11 +1,10 @@
-import json
 from glob import glob
 from figure import Figure, Handles
 from pathlib import Path
-from utils import Linspace
 from euclid import Point2, Line2
 from constants import ScreenConstants, EPS, N_STEPS
 import math
+import random
 from copy import copy
 from pygame import Surface
 
@@ -25,6 +24,13 @@ class Level:
         for figure in self.figures:
             figure.try_release(x, y, self.figures)
             self.intersections[figure.name] = []
+    
+
+    def probe_layer(self, x, y):
+        for figure in sorted(self.figures, key=lambda x: x.layer, reverse=True):
+            if figure.can_grab(x, y):
+                return figure.layer
+        return 0
 
     def update(self, x, y):
         for i, figure in enumerate(self.figures):
@@ -57,14 +63,59 @@ class Level:
                         self.intersections[figure.name] = [intersection]
                     else:
                         self.intersections[figure.name].append(intersection)
+        self.kmeans()
 
 
-            
+    def kmeans(self, external_points=None):
+        if external_points:
+            points=external_points
+        points = []
+        for _,v in self.intersections.items():
+            for p in v:
+                points.append(p[0])
+        N = len(points)
+        # points_oz = np.log(points[points>0])
+        # points_sz = np.log(-1*points[points<0])
+        # points_log = np.concatenate([points_oz, points_sz])
+        a,b = random.choices(points, k=2)
+        cluster_ids = [0 for _ in range(N)]
+        points_in_a = []
+        points_in_b = []
+        for _ in range(10):
+            points_in_a = []
+            points_in_b = []
+            for i in range(N):
+                dist_a = math.sqrt((points[i]-a)**2)
+                dist_b = math.sqrt((points[i]-b)**2)
+                if dist_a < dist_b:
+                    cluster_ids[i] = 0
+                    points_in_a.append(points[i])
+                else:
+                    cluster_ids[i] = 1
+                    points_in_b.append(points[i])
+            if points_in_a:
+                a = sum(points_in_a)/len(points_in_a)
+            else:
+                a = random.choice(points)
+
+            if points_in_b:
+                b = sum(points_in_b)/len(points_in_b)
+            else:
+                b = random.choice(points)
+
+        a_std = 0
+        b_std = 0
+        for p_a in points_in_a:
+            a_std += (p_a - a)**2
+        for p_b in points_in_b:
+            b_std += (p_b - b)**2
+        if a_std:
+            a_std /= len(points_in_a)
+        if b_std:
+            b_std /= len(points_in_b)
+
+        print(a_std, b_std)
+        self.clusters = [0 if cluster_ids[i] else 1 for i in range(N)]
 
 
-        
-
-
-        
-        
 

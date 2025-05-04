@@ -1,0 +1,82 @@
+{
+  "version": "5.6.1",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "line1",
+      "points": [
+        [
+          124.44117647058823,
+          134.58823529411765
+        ],
+        [
+          539.8823529411765,
+          80.91176470588236
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "line",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "line2",
+      "points": [
+        [
+          536.2058823529411,
+          92.6764705882353
+        ],
+        [
+          603.8529411764706,
+          109.58823529411765
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "line",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "line3",
+      "points": [
+        [
+          525.9117647058823,
+          597.8235294117648
+        ],
+        [
+          611.9411764705882,
+          576.5
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "line",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "line4",
+      "points": [
+        [
+          127.38235294117646,
+          550.7647058823529
+        ],
+        [
+          506.0588235294117,
+          596.3529411764706
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "line",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "box4.png",
+  "imageData": null,
+  "imageHeight": 703,
+  "imageWidth": 743
+}

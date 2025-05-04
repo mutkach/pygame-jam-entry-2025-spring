@@ -34,7 +34,7 @@ class Figure:
         self.image = Image.open(name).convert("RGBA")
         self.x = 0
         self.y = 0
-        self.name = name.root
+        self.name = name.stem
         self.layer = 0
         self.w, self.h = self.image.size
         self.scaled_w = int(self.w * ScreenConstants.SCALE)

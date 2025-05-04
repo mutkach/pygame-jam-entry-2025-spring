@@ -21,14 +21,20 @@ check_perspective = pygame_gui.elements.UIButton(relative_rect=pygame.Rect((50, 
 def main():
     running = True
     clock = pygame.time.Clock()
-    level = Level(n_level=8)
+    level = Level(n_level=6)
+    background = pygame.image.load("./assets/backgrounds/level8.png")
     layer = 0
     font = pygame.font.SysFont("Helvetica", 20)
 
     while running:
         time_delta = clock.tick(60) / 1000.0
-        screen.fill((0, 200, 200))
+        screen.fill((0, 0, 0))
+        screen.blit(background, (0,0))
         screen.convert_alpha()
+        pygame.draw.line(screen, color=(200, 200, 0), 
+                         start_pos=(0,ScreenConstants.HEIGHT//2), 
+                         end_pos=(ScreenConstants.WIDTH, ScreenConstants.HEIGHT//2), 
+                         width=5)
         x, y = pygame.mouse.get_pos()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -37,6 +43,10 @@ def main():
                 if event.ui_element == check_perspective:
                     level.check_perspective()
             if event.type == pygame.MOUSEBUTTONDOWN:
+                #probe = level.probe_layer(x,y)
+                #if probe:
+                #    print(probe)
+                #    layer = probe
                 level.try_grab(x,y, layer)
             if event.type == pygame.MOUSEBUTTONUP:
                 level.try_release(x,y)
@@ -56,13 +66,6 @@ def main():
         gui_manager.update(time_delta)
         level.update(x,y)
         level.draw(screen)
-
-        pygame.draw.line(screen, color=(200, 200, 0), 
-                         start_pos=(0,ScreenConstants.HEIGHT//2), 
-                         end_pos=(ScreenConstants.WIDTH, ScreenConstants.HEIGHT//2), 
-                         width=5)
-        
-
 
         
         for fig_name,intersections in level.intersections.items():
