@@ -23,6 +23,8 @@ For the sake of competitiveness the examples are not the actual game screenshots
 
 ![image2](examples/perspective_best5.jpg)
 
+My first approach showing all the possible guidelines converging everywhere:
+![image3](examples/perspective_best0.jpg)
 
 ### Assets:
 One of the levels was produced with the help of the [greatest building generator](https://paveloliva.gumroad.com/l/buildify)
