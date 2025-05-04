@@ -1,0 +1,118 @@
+{
+  "version": "5.6.1",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "line1",
+      "points": [
+        [
+          123.70355731225297,
+          2.434782608695663
+        ],
+        [
+          295.8379446640316,
+          89.78656126482213
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "line",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "line2",
+      "points": [
+        [
+          123.90118577075098,
+          28.126482213438745
+        ],
+        [
+          290.10671936758894,
+          102.83003952569169
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "line",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "line3",
+      "points": [
+        [
+          122.71541501976284,
+          2.83003952569171
+        ],
+        [
+          1.5691699604743188,
+          97.098814229249
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "line",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "line4",
+      "points": [
+        [
+          122.91304347826087,
+          27.73122529644269
+        ],
+        [
+          3.347826086956532,
+          109.74703557312252
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "line",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "line5",
+      "points": [
+        [
+          146.03557312252963,
+          141.76284584980237
+        ],
+        [
+          4.138339920948627,
+          110.93280632411067
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "line",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "line6",
+      "points": [
+        [
+          146.82608695652172,
+          142.94861660079053
+        ],
+        [
+          287.9328063241107,
+          103.6205533596838
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "line",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "box1.png",
+  "imageData": null,
+  "imageHeight": 144,
+  "imageWidth": 298
+}

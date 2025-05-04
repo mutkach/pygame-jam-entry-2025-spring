@@ -1,0 +1,82 @@
+{
+  "version": "5.6.1",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "line1",
+      "points": [
+        [
+          165.1282051282052,
+          452.82051282051276
+        ],
+        [
+          399.74358974358984,
+          457.94871794871796
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "line",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "line2",
+      "points": [
+        [
+          168.97435897435903,
+          747.6923076923076
+        ],
+        [
+          416.4102564102565,
+          769.4871794871794
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "line",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "line3",
+      "points": [
+        [
+          413.8461538461539,
+          774.6153846153845
+        ],
+        [
+          593.3333333333334,
+          713.0769230769231
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "line",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "line4",
+      "points": [
+        [
+          407.4358974358975,
+          457.94871794871796
+        ],
+        [
+          590.7692307692308,
+          446.4102564102564
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "line",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "Cube.png",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1920
+}
