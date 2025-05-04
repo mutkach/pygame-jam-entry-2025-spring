@@ -8,7 +8,7 @@ You are given a set of 2d-shapes or rendered objects that are presented as thumb
 
 However, their initial position in picture is lost. You need to rearrange them **spatially** inside the screen in a way that resulting composition corresponds to the rules of projection, i.e. all the non-parallel lines should converge towards a Vanishing point. 
 For your convenience you are provided with a horizon line and points where you hit them. Ideally these should converge to a single point or two points.
-The better the convergence - the better the score you get. Once you pass the minimal score, you may proceed to the next level (or hack your way there trivially by observing the logic in file `main.py`).
+The better the convergence - the better the **lower** score you get. Once you pass the minimal score, you may proceed to the next level (or hack your way there trivially by observing the logic in file `main.py`).
 Each object has a `layer` attribute that governs the order of rendering of the image and does not affect the score of the composition. You may use it for convenient depiction of the objects in the natural order (that is, the order that they would appear in an initial image).
 
 ### Controls:
@@ -19,12 +19,13 @@ Each object has a `layer` attribute that governs the order of rendering of the i
 
 ### Examples:
 For the sake of competitiveness the examples are not the actual game screenshots but pictures that demonstrate the principle.
-[image1]()
+[!image1](examples/perspective_best2.jpg)
 
+[!image2](examples/perspective_best5.jpg)
 
 
 ### Assets:
-One of the levels was produced with the help of the [building generator](https://paveloliva.gumroad.com/l/buildify)
+One of the levels was produced with the help of the [greatest building generator](https://paveloliva.gumroad.com/l/buildify)
 
 
 
